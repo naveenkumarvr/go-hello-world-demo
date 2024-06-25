@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: go-gin-app
+  name: go-hello-world
   namespace: argocd
 spec:
   destination:
@@ -10,8 +10,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/naveenkumarvr/go-hello-world-demo.git
-    path: ./deployment.yml
-    targetRevision: main
+    path: .  # Assuming your manifests are in the root directory
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
