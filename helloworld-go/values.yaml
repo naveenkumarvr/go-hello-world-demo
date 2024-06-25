@@ -1,0 +1,20 @@
+# Default values for helloworld-go.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+
+container-name: test01
+deploymentname: test001
+image:
+  repository: docker.io/naveenvr0792/demo-go-sample-app
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: v1 
+
+
+
+service:
+  type: NodePort
+  port: 3000
