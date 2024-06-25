@@ -9,8 +9,8 @@ spec:
     namespace: default
   project: default
   source:
-    repoURL: <URL of your Git repository>
-    path: <path to your Kubernetes manifests>
+    repoURL: https://github.com/naveenkumarvr/go-hello-world-demo.git
+    path: deployment.yml
     targetRevision: HEAD
   syncPolicy:
     automated:
