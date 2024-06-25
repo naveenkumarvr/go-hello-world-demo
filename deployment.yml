@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-gin-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-gin-app
+  template:
+    metadata:
+      labels:
+        app: go-gin-app
+    spec:
+      containers:
+        - name: go-gin-app
+          image: docker.io/naveenvr0792/demo-go-sample-app:v1 
+          ports:
+            - containerPort: 3000
